@@ -1,0 +1,60 @@
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 90px 0;
+}
+
+.firstSection>div {
+    width: 35%;
+}
+
+.leftSection {
+    font-size: 2.7rem;
+}
+
+.buttons {
+    margin: 23px 0;
+}
+
+.btn {
+    padding: 12px;
+    background-color: rgb(0, 0, 60);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: rgb(0, 0, 60);
+    border-color: rgb(0, 0, 60);
+}
+
+.name {
+    color: rgb(156, 110, 250);
+    font-weight: 700;
+}
+
+.rightSection img {
+    width: 85%;
+    margin: 23px 0;
+}
+
+hr {
+    border: 0;
+    background-color: rgb(45, 45, 150);
+    height: 1.2px;
+    margin: 40px 84px;
+}
+
+@media screen and (max-width: 800px) {
+    .firstSection{
+        flex-direction: column;
+    }
+    .firstSection>div {
+        width: 80%;
+    }
+}

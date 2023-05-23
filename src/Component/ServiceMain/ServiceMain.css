@@ -1,0 +1,26 @@
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+.ServiceCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #fff;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: white 5px 5px;
+}
+.ServiceCard:hover{
+    box-shadow: rgb(0, 0, 0) 4px 4px;
+    transition: .5s;
+    transform: translate(-10px, -10px);
+}
+.ServiceCard img{
+    width: 28vw;
+}
+.ServiceCard h2{
+    font-size: 2rem;
+}

@@ -1,0 +1,39 @@
+h1{
+    margin: 20px 84px ;
+}
+.box{
+    display: flex;
+    margin: 10px 84px ;
+
+}
+.card{
+    margin: 23px;
+    padding: 10px;
+    box-shadow: rgb(255, 255, 255) 1px 1px;
+}
+.card:hover{
+
+    box-shadow: rgb(255, 255, 255) 4px 4px;
+    transition: .5s;
+    transform: translate(-10px, -10px);
+}
+.card img{
+    width: 20px;
+}
+.card h3{
+    margin: 5px 0;
+}
+.card h4{
+    margin: 5px 0;
+}
+.card p{
+    margin: 5px 0;
+}
+
+
+@media screen and (max-width: 800px) {
+    .box{
+        flex-direction: column;
+    }
+
+}

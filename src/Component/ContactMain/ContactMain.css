@@ -1,0 +1,8 @@
+.map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map iframe{
+    width: 80vw;
+}
