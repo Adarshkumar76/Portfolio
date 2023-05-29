@@ -19,11 +19,14 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
-  margin-top: 55px;
+  align-items: center;
+  margin-top: 65px;
 }
+
 
 nav ul li {
   list-style: none;
+  padding: 5px;
 }
 
 nav ul li a {
