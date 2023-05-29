@@ -10,6 +10,7 @@ footer{
 .rights{
     color: #fff;
     font-size: 1.3rem;
+    margin: 10px;
 }
 
 @media screen and (max-width: 800px) {
