@@ -35,5 +35,8 @@ h1{
     .box{
         flex-direction: column;
     }
+    .card{
+        width: auto;
+    }
 
 }
