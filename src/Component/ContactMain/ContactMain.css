@@ -50,6 +50,6 @@
 }
 .contact-inputs input[type="submit"]{
     cursor: pointer;
-    width: 10vw;
+    width: 110px;
     height: 40px;
 }
