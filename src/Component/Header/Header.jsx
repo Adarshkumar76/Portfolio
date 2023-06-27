@@ -25,6 +25,7 @@ function Header() {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/service">Services</Link></li>
+                        <li><Link to="/projects">Projects</Link></li>
                         <li><Link to="/contact">Contact Me</Link></li>
                         {
                             isAuthenticated && <li>Hello, {user.name}</li>

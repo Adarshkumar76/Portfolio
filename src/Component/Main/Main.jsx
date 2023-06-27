@@ -24,12 +24,12 @@ function Main() {
             style={{ fontSize: '1em', display: 'inline-block', color: 'rgb(156, 110, 250)', fontWeight: '600' }}
           />
           <div className="buttons">
-            <a href="/Resume.pdf" target="_blank" download='Resume.pdf'><button className="btn">Download Resume</button></a>
-            <a href="https://github.com/Adarshkumar76" target="_blank"><button className="btn">Visit GitHub</button></a>
+            <a href="/Resume.pdf" target="_blank"  rel="noreferrer" download='Resume.pdf'><button className="btn">Download Resume</button></a>
+            <a href="https://github.com/Adarshkumar76" target="_blank"  rel="noreferrer"><button className="btn">Visit GitHub</button></a>
           </div>
         </div>
         <div className="rightSection">
-          <img src="/dev.png" alt="Developer image" />
+          <img src="/dev.png" alt="Developer img" />
         </div>
       </section>
       <hr />
