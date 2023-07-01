@@ -21,7 +21,8 @@ hr {
 
 h3,
 p {
-    margin: auto;
+    margin: 20px;
+
 }
 
 .details {
@@ -39,7 +40,6 @@ p {
     color: #fff;
     font-size: 20px;
     cursor: pointer;
-    margin: 10px 84px;
 }
 
 .btn:hover {
