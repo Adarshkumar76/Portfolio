@@ -14,6 +14,7 @@ function NoPage() {
                     alignItems: "center",
                     justifyContent: "center",
                     height: "75.8vh",
+                    padding: "15px",
                 }}
             >
                 <h1>

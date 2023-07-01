@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head >
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" href="./developer.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,30 @@
     <link rel="manifest" href="./developer.png" />
     <title>Adarsh - Developer Portfolio</title>
   </head>
-  <body style="background-color: rgb(0, 0, 65); color: #fff" oncontextmenu="return false">
+  <body
+    style="background-color: rgb(0, 0, 65); color: #fff" 
+    oncontextmenu="return false;"
+  >
     <div id="root"></div>
+    <script>
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      function ctrlShiftKey(e, keyCode) {
+        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+      }
+
+      document.onkeydown = function (e) {
+        if (
+          event.keyCode === 123 ||
+          ctrlShiftKey(e, "I") ||
+          ctrlShiftKey(e, "J") ||
+          ctrlShiftKey(e, "C") ||
+          (e.ctrlKey && e.keyCode === "U".charCodeAt(0))
+        )
+          return false;
+      };
+    </script>
   </body>
 </html>
