@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Component/Header/Header";
 import Footer from "../Component/Footer/Footer";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
 function NoPage() {
     const { loginWithRedirect } = useAuth0();
@@ -17,14 +18,12 @@ function NoPage() {
                     padding: "15px",
                 }}
             >
-                <h1>
-                    Go to {" "}
-                    <a
-                        style={{ color: "DodgerBlue", "text-decoration": "none" }}
-                        href="/"
-                    >
-                        HOME PAGE
-                    </a>
+                <h1> Go to {" "} <Link
+                    style={{ color: "DodgerBlue", "text-decoration": "none" }}
+                    to="/"
+                >
+                    HOME PAGE
+                </Link>
                     {" "}and
                     <span
                         style={{ color: "DodgerBlue", cursor: "pointer" }}
