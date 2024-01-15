@@ -33,6 +33,20 @@
     border-color: rgb(0, 0, 60);
 }
 
+.social{
+    margin: 10px;
+}
+
+.icons{
+    padding: 10px;
+    color: rgb(156, 110, 250);
+}
+
+.icons:hover{
+    filter: drop-shadow(0 0 0.50rem #ffffffbc);
+    
+}
+
 .name {
     color: rgb(156, 110, 250);
     font-weight: 700;

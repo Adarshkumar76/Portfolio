@@ -79,7 +79,7 @@ function main() {
             </a>
           </div>
           <div className="project-card">
-            <img src="/Coundown.png" alt="img" />
+            <img src="/Countdown.png" alt="img" />
             <p>Countdown timer using HTML, CSS & JavaScript</p>
             <a href="https://drive.google.com/drive/folders/1U5ef2D-pCx4lZqogrUuXTUjGqMHeXCeq?usp=drive_link" target='_blank' rel="noreferrer">
               <button className='btn'>Get Code</button>

@@ -24,7 +24,7 @@ function NoPage() {
                 >
                     HOME PAGE
                 </Link>
-                    {" "}and
+                    {" "}or
                     <span
                         style={{ color: "DodgerBlue", cursor: "pointer" }}
                         onClick={() => loginWithRedirect()}
