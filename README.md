@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m persuing my b.tech from AKTU Lucknow <br>🌱 I’m currently learning C
+🔭 I’m persuing my b.tech from AKTU Lucknow <br>🌱 I’m currently learning C in my collage
 
 
 ## 🌐 Socials:
