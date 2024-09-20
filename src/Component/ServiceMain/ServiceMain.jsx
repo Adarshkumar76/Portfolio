@@ -17,7 +17,7 @@ function ServiceMain() {
                     <div className="box">
                         <div className="ServiceCard">
                             <img src="/Front.png" alt="FrontEnt" />
-                            <h2>FrontEnt Development</h2>
+                            <h2>FrontEnd Development</h2>
                             <Link to="/contact"><button className="btn">Contact</button></Link>
                         </div>
                         <div className="ServiceCard">
