@@ -1,0 +1,22 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-arrow {
+  display: none !important;
+}
+.langH1{
+    text-align: center;
+    margin: 10px;
+}
+.slick-track{
+    margin: 10px !important;
+}
+.slick-slide{
+    margin: 10px !important;
+    display: flex !important;
+}
+.slick-slide img{
+  height: 80px;
+  width: auto;
+  margin: 0px 30px;
+}

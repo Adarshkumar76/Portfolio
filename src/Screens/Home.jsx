@@ -3,6 +3,7 @@ import Header from '../Component/Header/Header'
 import Footer from '../Component/Footer/Footer'
 import Main from '../Component/Main/Main'
 import Work from '../Component/Work/Work'
+import Lang from '../Component/lang/lang'
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <Header/>
       <Main/>
       <Work/>
+      <Lang/>
       <Footer/>
     </>
   )

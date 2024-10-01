@@ -1,5 +1,6 @@
 import React from 'react'
 import './AboutMain.css'
+import Lang from '../lang/lang'
 
 function AboutMain() {
     return (
@@ -12,6 +13,7 @@ function AboutMain() {
                         <img src="/about.png" alt="about" />
                     </div>
                 </div>
+                <Lang/>
                 <hr />
                 <div className="bottom">
                     <h3>WHO I AM</h3>
