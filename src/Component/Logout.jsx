@@ -1,11 +1,16 @@
 import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const LogoutButton = () => {
-  const { logout } = useAuth0();
-
+  const url = "http://localhost:3000/";
+  const redirectToHome = () => {
+    window.location.href = url;
+  };
   return (
-    <button className="btn" style={{margin: '5px', padding: '5px'}} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+    <button
+      className="btn"
+      style={{ margin: "5px", padding: "5px" }}
+      onClick={() => redirectToHome()}
+    >
       Log Out
     </button>
   );

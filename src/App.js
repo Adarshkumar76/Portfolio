@@ -6,6 +6,8 @@ import Contact from "./Screens/ContactMe"
 import Projects from "./Screens/Projects"
 import NoPage from "./Screens/NoPage"
 import { useAuth0 } from "@auth0/auth0-react";
+import Login from "./Screens/Login"
+import SignUp from "./Screens/SignUp"
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Route path={isAuthenticated ? "/service" : "/"} element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path={isAuthenticated ? "/projects" : "/"} element={<Projects />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>
   )
