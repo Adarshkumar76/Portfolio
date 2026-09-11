@@ -28,6 +28,7 @@ import {
   getActiveResumeUrl,
   saveActiveResumeUrl,
   isSupabaseConfigured,
+  supabase,
 } from "@/lib/supabaseClient";
 
 export default function AdminPage() {
@@ -60,17 +61,70 @@ export default function AdminPage() {
   const [savingProject, setSavingProject] = useState(false);
   const [projectStatus, setProjectStatus] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
-  // PIN authentication for static/serverless deployment
+  // PIN / Password authentication
   const checkAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError("");
-    const correctPin = process.env.NEXT_PUBLIC_ADMIN_PIN || "123";
-    if (pinInput && pinInput.trim() === correctPin.trim()) {
+
+    const entered = pinInput.trim();
+    if (!entered) {
+      setAuthError("Please enter your Admin password.");
+      return;
+    }
+
+    // Configured PIN from Render environment variables (injected at build time via next.config.mjs)
+    const envPin = (
+      process.env.NEXT_PUBLIC_ADMIN_PIN ||
+      process.env.NEXT_PUBLIC_ADMIN_SECRET_PIN ||
+      ""
+    ).trim();
+
+    // 1. If an environment password is configured on Render (and not default "123"), strictly check it
+    if (envPin && envPin !== "123") {
+      if (entered === envPin) {
+        setIsAuthenticated(true);
+        setAuthError("");
+        return;
+      }
+      setAuthError("Invalid Admin Password. Access denied.");
+      return;
+    }
+
+    // 2. Also check if a password was saved dynamically in Supabase 'settings' table
+    if (supabase) {
+      try {
+        const { data } = await supabase
+          .from("settings")
+          .select("value")
+          .in("key", ["admin_pin", "admin_password"])
+          .limit(1);
+
+        if (data && data.length > 0 && data[0]?.value) {
+          const dbPin = data[0].value.trim();
+          if (dbPin) {
+            if (entered === dbPin) {
+              setIsAuthenticated(true);
+              setAuthError("");
+              return;
+            }
+            setAuthError("Invalid Admin Password. Access denied.");
+            return;
+          }
+        }
+      } catch {
+        // continue
+      }
+    }
+
+    // 3. Fallback: If no custom password was set anywhere, or if explicitly set to "123"
+    const fallbackPin = envPin || "123";
+    if (entered === fallbackPin) {
       setIsAuthenticated(true);
       setAuthError("");
-    } else {
-      setAuthError("Invalid Admin PIN. Access denied.");
+      return;
     }
+
+    setAuthError("Invalid Admin Password. Access denied.");
   };
 
   const refreshProjects = async () => {

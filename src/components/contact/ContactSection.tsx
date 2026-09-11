@@ -110,20 +110,18 @@ export default function ContactSection() {
               {emails.map((item) => (
                 <div
                   key={item.address}
-                  className={`p-4 rounded-2xl border transition-all ${
-                    item.isPrimary
-                      ? "bg-gradient-to-r from-purple-900/30 via-indigo-900/20 to-cyan-900/20 border-cyan-500/40 shadow-lg shadow-cyan-500/10"
-                      : "bg-white/[0.02] border-white/10 hover:border-purple-500/30"
-                  }`}
+                  className={`p-4 rounded-2xl border transition-all ${item.isPrimary
+                    ? "bg-gradient-to-r from-purple-900/30 via-indigo-900/20 to-cyan-900/20 border-cyan-500/40 shadow-lg shadow-cyan-500/10"
+                    : "bg-white/[0.02] border-white/10 hover:border-purple-500/30"
+                    }`}
                 >
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center space-x-3 min-w-0">
                       <div
-                        className={`p-2.5 rounded-xl flex-shrink-0 ${
-                          item.isPrimary
-                            ? "bg-cyan-500/20 text-cyan-300"
-                            : "bg-white/5 text-gray-400"
-                        }`}
+                        className={`p-2.5 rounded-xl flex-shrink-0 ${item.isPrimary
+                          ? "bg-cyan-500/20 text-cyan-300"
+                          : "bg-white/5 text-gray-400"
+                          }`}
                       >
                         <Mail className="w-4 h-4" />
                       </div>
@@ -243,7 +241,7 @@ export default function ContactSection() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Sarah Connor"
+                      placeholder="e.g. Adarsh Singh"
                       className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-cyan-400 transition"
                     />
                   </div>
@@ -256,7 +254,7 @@ export default function ContactSection() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="sarah@example.com"
+                      placeholder="adarsh@example.com"
                       className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-cyan-400 transition"
                     />
                   </div>
