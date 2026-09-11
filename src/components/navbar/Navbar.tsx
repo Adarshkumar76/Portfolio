@@ -3,14 +3,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, FileText, ExternalLink, Sun, Moon } from "lucide-react";
+import { Menu, X, FileText, ExternalLink } from "lucide-react";
 import { getActiveResumeUrl } from "@/lib/supabaseClient";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [resumeUrl, setResumeUrl] = useState<string>("/Resume.pdf");
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,32 +22,8 @@ export default function Navbar() {
       if (url) setResumeUrl(url);
     });
 
-    // Theme initialization (Dark is default)
-    const savedTheme = (localStorage.getItem("portfolio_theme") as "dark" | "light") || "dark";
-    setTheme(savedTheme);
-    if (savedTheme === "light") {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-    } else {
-      document.documentElement.classList.remove("light");
-      document.documentElement.classList.add("dark");
-    }
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleTheme = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-    localStorage.setItem("portfolio_theme", nextTheme);
-    if (nextTheme === "light") {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-    } else {
-      document.documentElement.classList.remove("light");
-      document.documentElement.classList.add("dark");
-    }
-  };
 
   const navLinks = [
     { name: "About", href: "/#about" },
@@ -111,21 +86,8 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Action Buttons: Resume & Theme Toggle (Lock button removed from header) */}
+        {/* Action Button: Resume */}
         <div className="hidden md:flex items-center space-x-3">
-          <button
-            onClick={toggleTheme}
-            className="p-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-gray-300 hover:text-cyan-300 hover:border-cyan-500/40 transition-all"
-            title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? (
-              <Sun className="w-4 h-4 text-amber-400 animate-spin-slow" />
-            ) : (
-              <Moon className="w-4 h-4 text-cyan-300" />
-            )}
-          </button>
-
           <a
             href={resumeUrl}
             target="_blank"
@@ -140,17 +102,6 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center space-x-2">
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg text-gray-300 hover:text-white bg-white/5"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-cyan-300" />
-            )}
-          </button>
           <a
             href={resumeUrl}
             target="_blank"

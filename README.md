@@ -2,7 +2,7 @@
 
 A high-performance, 3D cosmic-themed developer portfolio and dynamic CMS built with **Next.js 14 (App Router)**, **TypeScript**, **TailwindCSS**, and **Supabase**. 
 
-Featuring an interactive HTML5 3D starfield canvas, mouse-tracking 3D tilt cards, dark/light mode toggle, an ATS-friendly experience timeline, and a secure password-protected **Admin Panel** to append projects and manage resumes dynamically without redeploying code.
+Featuring an interactive HTML5 3D starfield canvas, mouse-tracking 3D tilt cards, deep cosmic dark aesthetics, an ATS-friendly experience timeline, and a secure password-protected **Admin Panel** to append projects and manage resumes dynamically without redeploying code.
 
 ---
 
