@@ -1,25 +1,144 @@
-# 💫 About Me:
-🔭 I’m persuing my b.tech from AKTU Lucknow <br>🌱 I’m currently learning C in my collage
+# 🌌 Adarsh Kumar Singh | Full Stack Developer Portfolio
 
+A high-performance, 3D cosmic-themed developer portfolio and dynamic CMS built with **Next.js 14 (App Router)**, **TypeScript**, **TailwindCSS**, and **Supabase**. 
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/adarsh_ku_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/adarshkusingh) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/@adarshku_Singh) 
-
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=plastic&logo=c&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=plastic&logo=css3&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=plastic&logo=java&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=plastic&logo=bootstrap&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=plastic&logo=node.js&logoColor=white) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=plastic&logo=react&logoColor=%2361DAFB) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=plastic&logo=react&logoColor=%2361DAFB) ![ANDROID](https://img.shields.io/badge/android-%2320232a.svg?style=plastic&logo=android&logoColor=%a4c639) ![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=plastic&logo=github&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=plastic&logo=socket.io&badgeColor=010101) ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=plastic&logo=yarn&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=plastic&logo=mongodb&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=plastic&logo=Canva&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Adarshkumar76&theme=react&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=Adarshkumar76&theme=react&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Adarshkumar76&theme=react&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=Adarshkumar76&theme=onedark&no-frame=true&no-bg=true&margin-w=4)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=dark)
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Adarshkumar76&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
+Featuring an interactive HTML5 3D starfield canvas, mouse-tracking 3D tilt cards, dark/light mode toggle, an ATS-friendly experience timeline, and a secure password-protected **Admin Panel** to append projects and manage resumes dynamically without redeploying code.
 
 ---
-[![](https://visitcount.itsvg.in/api?id=Adarshkumar76&icon=9&color=3)](https://visitcount.itsvg.in)
+
+## 🚀 Key Highlights
+
+- **3D Cosmic Experience**: Custom 60fps particle starfield and interactive floating tech stack sphere built on native Canvas (zero GPU lag on mobile).
+- **Interactive 3D Tilt Cards**: Physics-based 3D tilt cards that dynamically follow cursor movement with realistic glare and glowing neon borders.
+- **Dynamic Admin CMS (`/admin`)**: Secure server-authenticated admin portal to publish, edit, or delete projects and upload project screenshots directly to high-speed cloud CDN storage.
+- **Live Resume Manager**: Update the downloadable resume PDF or external link on the fly from the admin panel—instantly syncing across all download triggers on the portfolio.
+- **Client & Company Showcase**: Dedicated tags and filtering for Client Projects (e.g., [Rasovyam](https://rasovyam.com)), Company E-Commerce Plugins ([Shopify & WooCommerce Plugin Suite](https://github.com/adarshku76)), and full-stack SaaS applications.
+- **Zero-Downtime Resilience**: Built-in cache fallback ensures the website never breaks or goes down, even if third-party cloud services are unreachable or sleeping.
+- **Keep-Alive Automation**: Pre-configured GitHub Actions cron workflow keeps Supabase active 24/7/365, completely preventing free-tier 7-day auto-pauses.
+- **Multi-Channel Contact Hub**: Connects directly to `adarshk3113@gmail.com` with server logging and 1-click mail app dispatches for Gmail, Outlook, and Yahoo.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Framework** | Next.js 14 (App Router), React 18 |
+| **Language & Typings** | TypeScript, Modern ES6+ |
+| **Styling & UI** | TailwindCSS, Framer Motion, Lucide Icons, Glassmorphism CSS |
+| **3D & Canvas** | HTML5 Canvas 3D Projection, Starfield Parallax, Interactive Tech Orb |
+| **Cloud Database & Storage** | Supabase (PostgreSQL, Row-Level Security, Cloud Storage CDN) |
+| **Security & Auth** | Server-side API verification (`/api/admin/verify`), protected route checks |
+| **Hosting & Deployment** | Render (Web Service), GitHub Actions |
+
+---
+
+## 📂 Featured Production Projects
+
+- **[Rasovyam](https://rasovyam.com)** `Personal / Client Project`  
+  *High-conversion D2C organic food & wellness e-commerce platform with dynamic cart drawer, multi-gateway payments (UPI/Cards), catalog filtering, and order dispatch pipelines.*  
+  *Stack: React.js, Node.js, WooCommerce / Shopify APIs, TailwindCSS*
+
+- **[Shopify & WooCommerce Custom Plugin Suite](https://github.com/adarshku76)** `Company Project`  
+  *Enterprise-grade e-commerce extensions and webhook listeners automating real-time inventory sync across third-party ERPs, custom checkout modifiers, and dynamic discount calculators.*  
+  *Stack: Node.js, PHP, Shopify App Bridge, WooCommerce Hooks, Redis, Webhooks*
+
+- **[SyncCraft](https://github.com/Adarshkumar76/sync-craft)** `Personal / Full-Stack`  
+  *Real-time collaborative workspace enabling engineering teams to synchronize code, chat in room-based channels, and execute code within sandboxed environments.*  
+  *Stack: Next.js, Node.js, Express, WebSockets, MongoDB, Docker*
+
+- **[DueSora](https://github.com/Adarshkumar76/duesora)** `Personal / SaaS`  
+  *Fintech billing and recurring dues automation SaaS featuring automated client payment reminders, multi-currency PDF invoice generation, and Stripe integration.*  
+  *Stack: React, Node.js, PostgreSQL, Prisma, Stripe API*
+
+- **[Netflix-GenAI](https://github.com/Adarshkumar76/netflix-GENAI)** `AI / Full-Stack`  
+  *Contextual media discovery platform leveraging LLMs and vector search for conversational, mood-based movie and entertainment recommendations.*  
+  *Stack: React, Python, OpenAI API, Vector Embeddings, TailwindCSS*
+
+---
+
+## 💼 Work Experience
+
+### **Full Stack Developer (E-Commerce & Custom Plugins)**
+**E-Commerce Tech Solutions & Agency** • *2023 – Present*
+- Engineered and maintained custom Shopify Apps and WooCommerce PHP plugins processing high-volume checkout transactions.
+- Designed resilient RESTful endpoints and webhook ingestion workers in Node.js, automating ERP inventory synchronization.
+- Optimized storefront performance and Core Web Vitals, reducing server response times by 35%.
+- Implemented secure JWT authentication and HMAC webhook signature verification across distributed services.
+
+### **Full Stack Engineer & Web Consultant**
+**Freelance & Independent Client Engagements** • *2022 – 2023*
+- Delivered 12+ end-to-end full-stack web applications and SaaS platforms for international clients.
+- Built responsive MERN and Next.js applications with secure payment processing and intuitive admin dashboards.
+- Containerized applications using Docker and deployed production environments on Linux VPS with Nginx reverse proxies.
+
+---
+
+## ⚡ Getting Started Locally
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Adarshkumar76/Portfolio.git
+cd Portfolio
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+Create a `.env` file in the project root (reference [`.env.example`](.env.example)):
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+ADMIN_SECRET_PIN=your_custom_admin_password
+NEXT_PUBLIC_RESUME_URL=/Resume.pdf
+```
+
+### 4. Initialize Database (1-Click)
+Run the script in [`supabase-setup.sql`](supabase-setup.sql) in your Supabase SQL Editor to automatically create:
+- `projects` table
+- `settings` table
+- `contact_messages` table
+- `portfolio-assets` public storage bucket
+
+### 5. Run development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+
+---
+
+## 🚢 Render Deployment Guide
+
+This project is configured for seamless 1-click deployment on **Render**:
+
+1. In the [Render Dashboard](https://dashboard.render.com), click **New +** ➔ **Web Service**.
+2. Select the repository: `Adarshkumar76/Portfolio`.
+3. Set configuration:
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm run start`
+   - **Plan**: `Free`
+4. Under **Environment**, add:
+   - `NODE_VERSION` = `20.14.0`
+   - `NEXT_PUBLIC_SUPABASE_URL` = *(Your Supabase URL)*
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = *(Your Supabase Anon Key)*
+   - `ADMIN_SECRET_PIN` = *(Your chosen admin password)*
+   - `NEXT_PUBLIC_RESUME_URL` = `/Resume.pdf`
+5. Click **Deploy Web Service**.
+
+---
+
+## 📬 Contact & Connect
+
+- **Primary Email**: [adarshk3113@gmail.com](mailto:adarshk3113@gmail.com)
+- **Alternative Inquiries**: [adarsh.ku@yahoo.com](mailto:adarsh.ku@yahoo.com) • [adarshk3113@outlook.com](mailto:adarshk3113@outlook.com)
+- **LinkedIn**: [linkedin.com/in/adarshkusingh](https://linkedin.com/in/adarshkusingh)
+- **GitHub**: [github.com/Adarshkumar76](https://github.com/Adarshkumar76)
+- **E-Commerce / Code Repositories**: [github.com/adarshku76](https://github.com/adarshku76)
+
+---
+
+Developed with precision by **Adarsh Kumar Singh**.
