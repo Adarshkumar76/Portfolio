@@ -1,0 +1,22 @@
+name: Keep Supabase Active
+
+on:
+  schedule:
+    # Runs every 3 days at 00:00 UTC to ensure Supabase never pauses from inactivity
+    - cron: '0 0 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  ping-database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase Endpoint
+        run: |
+          if [ -n "${{ secrets.SUPABASE_URL }}" ] && [ -n "${{ secrets.SUPABASE_ANON_KEY }}" ]; then
+            curl -s -o /dev/null -w "%{http_code}" -X GET "${{ secrets.SUPABASE_URL }}/rest/v1/projects?limit=1" \
+              -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+              -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}"
+            echo "Supabase database pinged successfully. Status keeps active!"
+          else
+            echo "SUPABASE_URL or SUPABASE_ANON_KEY not set in GitHub secrets yet. Skipping ping."
+          fi
