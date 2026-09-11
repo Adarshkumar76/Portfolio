@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Mail, Send, Github, Linkedin, MessageSquare, CheckCircle, Sparkles, Copy, Check, ExternalLink } from "lucide-react";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -46,12 +47,22 @@ export default function ContactSection() {
     setSubmitting(true);
 
     try {
-      // 1. Post to internal API route to store in database
-      await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      // 1. Save directly to Supabase if connected
+      if (supabase) {
+        try {
+          await supabase.from("contact_messages").insert([
+            {
+              name: formData.name,
+              email: formData.email,
+              subject: formData.subject || "Portfolio Inquiry",
+              message: formData.message,
+              created_at: new Date().toISOString(),
+            },
+          ]);
+        } catch {
+          // fallback
+        }
+      }
 
       // 2. Also construct mailto direct fallback so visitor can dispatch immediately
       const mailtoUrl = `mailto:adarshk3113@gmail.com?subject=${encodeURIComponent(

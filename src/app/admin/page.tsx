@@ -60,25 +60,16 @@ export default function AdminPage() {
   const [savingProject, setSavingProject] = useState(false);
   const [projectStatus, setProjectStatus] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
-  // Secure server-side PIN authentication
+  // PIN authentication for static/serverless deployment
   const checkAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError("");
-    try {
-      const res = await fetch("/api/admin/verify", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pin: pinInput }),
-      });
-      const data = await res.json();
-      if (res.ok && data.valid) {
-        setIsAuthenticated(true);
-        setAuthError("");
-      } else {
-        setAuthError(data.error || "Invalid Admin PIN. Access denied.");
-      }
-    } catch {
-      setAuthError("Failed to reach verification service.");
+    const correctPin = process.env.NEXT_PUBLIC_ADMIN_PIN || "123";
+    if (pinInput && pinInput.trim() === correctPin.trim()) {
+      setIsAuthenticated(true);
+      setAuthError("");
+    } else {
+      setAuthError("Invalid Admin PIN. Access denied.");
     }
   };
 
